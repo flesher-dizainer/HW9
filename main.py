@@ -5,7 +5,6 @@ import selenium.webdriver.remote.webelement
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
-from pprint import pprint
 
 
 def create_driver() -> webdriver.Chrome:
@@ -92,7 +91,6 @@ def main():
         full_list.extend(data_page)
         sleep(randint(0, 2))
     save_data(full_list, 'books_data.json')
-    pprint(full_list, sort_dicts=False)
     driver.quit()
 
 
